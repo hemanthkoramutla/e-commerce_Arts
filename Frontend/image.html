@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtView</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .button-container {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .button-container a {
+            text-decoration: none;
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            margin-right: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .button-container a:hover {
+            background-color: #45a049;
+        }
+
+        /* Image Slider Styles */
+        .slider-container {
+            margin-top: 20px;
+            overflow: hidden;
+        }
+
+        /* .slideshow-container {
+        max-width: 800px;
+        position: relative;
+        margin: auto;
+        } */
+
+        .image-slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slider-image {
+            width: 100%;
+           
+            flex: 0 0 auto;
+            height: 50;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="button-container">
+            <a href="login.html">Login</a>
+            <a href="signup.html">Sign Up</a>
+        </div>
+        <h1>ArtView</h1>
+    </header>
+
+    <!-- Image Slider -->
+    <div class="slider-container">
+        <div class="image-slider">
+            <img class="slider-image" src="resources/a1.jpg" alt="Image 1">
+            <!-- Add more images as needed -->
+            <img class="slider-image" src="resources/d1.jpg" alt="Image 2">
+            <img class="slider-image" src="resources/p1.jpg" alt="Image 3">
+            <!-- Add more images as needed -->
+        </div>
+    </div>
+
+    <!-- Your page content goes here -->
+
+    <script>
+        // JavaScript for Image Slider
+        let imageIndex = 0;
+        const slider = document.querySelector('.image-slider');
+        const images = document.querySelectorAll('.slider-image');
+
+        function nextSlide() {
+            imageIndex = (imageIndex + 1) % images.length;
+            updateSlider();
+        }
+
+        function prevSlide() {
+            imageIndex = (imageIndex - 1 + images.length) % images.length;
+            updateSlider();
+        }
+
+        function updateSlider() {
+            const translateValue = -imageIndex * 100 + '%';
+            slider.style.transform = 'translateX(' + translateValue + ')';
+        }
+
+        setInterval(nextSlide, 3000); // Change slide every 3 seconds
+    </script>
+
+</body>
+</html>
