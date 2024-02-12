@@ -16,7 +16,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url('https://image.jimcdn.com/app/cms/image/transf/none/path/s906b641b686670d9/backgroundarea/ife3090a6f76839f6/version/1563852387/image.jpg'); no-repeat center center fixed;
+            background-image: url('https://image.jimcdn.com/app/cms/image/transf/none/path/s906b641b686670d9/backgroundarea/ife3090a6f76839f6/version/1563852387/image.jpg');
             background-size: cover;
             height: 100vh;
             display: flex;
@@ -78,10 +78,30 @@
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
 
+            <!-- <label for="password">Password:</label>
+            <input type="password" id="confirm_password" name="confirm_password" required> -->
+
+            <label for="password">Confirm Password:</label>
+            <input type="password" id="confirm_password" name="confirm_password"  required>
+      <span id="error_message" class="error"></span>
+
             <button type="submit">Sign Up</button>
             <p>Already have an account? <a href="login.html">Login here</a>.</p>
+            <p>Are you an admin? <a href="adminlogin.html">Login here</a>.</p>
         </form>
     </div>
+    <script>
+        function validateForm() {
+          var password = document.getElementById("password").value;
+          var confirm_password = document.getElementById("confirm_password").value;
+    
+          if (password !== confirm_password) {
+            document.getElementById("error_message").innerHTML = "Passwords do not match";
+            return false;
+          }
+          return true;
+        }
+      </script>
 
 </body>
 </html>
