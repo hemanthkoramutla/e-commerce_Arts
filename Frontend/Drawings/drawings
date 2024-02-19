@@ -1,1 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Gallery - Products</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Basic CSS for styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #c4eaec;
+            color: #fff;
+            padding: 8px;
+            text-align: center;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .product {
+            width: 30%;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .product h2 {
+            margin-top: 0;
+        }
+
+        .product p {
+            margin: 5px 0;
+        }
+
+        .icon-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .icon-container a {
+            color: #333;
+            margin-left: 20px;
+            text-decoration: none;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Explore Drawings and Paintings</h1>
+        <div class="icon-container">
+            <a href="home.html"><i class="fas fa-home"></i></a>
+            <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+    </header>
+    <div class="container">
+        <!-- Product Listing -->
+        <div class="product">
+            <a href="d1.html">
+                <img src="drawings/d1.jpg" alt="Product 1">
+                <h2>Sanjana</h2>
+                <p>Price: &#x20B9;149.00</p>
+            </a>
+        </div>
+        <div class="product">
+            <a href="d2.html">
+                <img src="drawings/d2.jpg" alt="Product 2">
+                <h2>Smoky</h2>
+                <p>Price: &#x20B9;99.00</p>
+            </a>
+        </div>
+        <div class="product">
+            <a href="d3.html">
+                <img src="drawings/d3.jpg" alt="Product 3">
+                <h2>Cutie</h2>
+                <p>Price: &#x20B9;149.00</p>
+            </a>
+        </div>
+        <div class="product">
+            <a href="d4.html">
+                <img src="drawings/d4.jpg" alt="Product 4">
+                <h2>Product 2</h2>
+                <p>Price: &#x20B9;119.00</p>
+            </a>
+        </div>
+        <div class="product">
+            <a href="d5.html">
+                <img src="drawings/d5.jpg" alt="Product 5">
+                <h2>Product 2</h2>
+                <p>Price: &#x20B9;139.00</p>
+            </a>
+        </div>
+        <div class="product">
+            <a href="p4.html">
+                <img src="paintings/p4.jpg" alt="Product 6">
+                <h2>Product 6</h2>
+                <p>Price: &#x20B9;199.00</p>
+            </a>
+        </div>
+        <div class="product">
+            <a href="d6.html">
+                <img src="drawings/d6.jpg" alt="Product 6">
+                <h2>Sad Eyes</h2>
+                <p>Price: &#x20B9;129.00</p>
+            </a>
+        </div>
+        <div class="product">
+            <a href="d7.html">
+                <img src="drawings/d7.jpg" alt="Product 7">
+                <h2>Product 2</h2>
+                <p>Price: &#x20B9;169.00</p>
+            </a>
+        </div>
+        <div class="product">
+            <a href="d8.html">
+                <img src="drawings/d8.jpg" alt="Product 8">
+                <h2>Product 2</h2>
+                <p>Price: &#x20B9;129.00</p>
+            </a>
+        </div>
+        <div class="product">
+            <a href="d9.html">
+                <img src="drawings/d9.jpg" alt="Product 9">
+                <h2>Product 2</h2>
+                <p>Price: &#x20B9;199.00</p>
+            </a>
+        </div>
+        <div class="product">
+            <a href="d10.html">
+                <img src="drawings/d10.jpg" alt="Product 10">
+                <h2>Product 2</h2>
+                <p>Price: &#x20B9;139.00</p>
+            </a>
+        </div>
+        <div class="product">
+            <a href="p5.html">
+                <img src="paintings/p5.webp" alt="Product 20">
+                <h2>Product 20</h2>
+                <p>Price: &#x20B9;229.00</p>
+            </a>
+        </div>
+        <div class="product">
+            <a href="d11.html">
+                <img src="drawings/d11.jpg" alt="Product 11">
+                <h2>Product 2</h2>
+                <p>Price: &#x20B9;149.00</p>
+            </a>
+        </div>
+        <div class="product">
+            <a href="d12.html">
+                <img src="drawings/d12.jpg" alt="Product 12">
+                <h2>Naruto</h2>
+                <p>Price: &#x20B9;199.00</p>
+            </a>
+        </div>
+        <div class="product">
+            <a href="d13.html">
+                <img src="drawings/d13.jpg" alt="Product 13">
+                <h2>Product 2</h2>
+                <p>Price: &#x20B9;229.00</p>
+            </a>
+        </div>
+        <div class="product">
+            <a href="p7.html">
+                <img src="paintings/p7.jpg" alt="Product 15">
+                <h2>Product 2</h2>
+                <p>Price: &#x20B9;179.00</p>
+            </a>
+        </div>
+        <div class="product">
+            <a href="d14.html">
+                <img src="drawings/d14.jpg" alt="Product 14">
+                <h2>Product 2</h2>
+                <p>Price: &#x20B9;249.00</p>
+            </a>
+        </div>
+        <div class="product">
+            <a href="d15.html">
+                <img src="drawings/d15.jpg" alt="Product 15">
+                <h2>Product 2</h2>
+                <p>Price: &#x20B9;249.00</p>
+            </a>
+        </div>
+        <div class="product">
+            <a href="p6.html">
+                <img src="paintings/p6.webp" alt="Product 15">
+                <h2>Product 2</h2>
+                <p>Price: &#x20B9;189.00</p>
+            </a>
+        </div>
+        <div class="product">
+            <a href="d16.html">
+                <img src="drawings/d16.jpg" alt="Product 16">
+                <h2>Product 2</h2>
+                <p>Price: &#x20B9;259.00</p>
+            </a>
+        </div>
+        <div class="product">
+            <a href="d17.html">
+                <img src="drawings/d17.jpg" alt="Product 17">
+                <h2>Product 2</h2>
+                <p>Price: &#x20B9;299.00</p>
+            </a>
+        </div>
+        <div class="product">
+            <a href="d18.html">
+                <img src="drawings/d18.jpg" alt="Product 18">
+                <h2>Product 2</h2>
+                <p>Price: &#x20B9;229.00</p>
+            </a>
+        </div>
+        <div class="product">
+            <a href="d19.html">
+                <img src="drawings/d19.jpg" alt="Product 19">
+                <h2>Product 19</h2>
+                <p>Price: &#x20B9;239.00</p>
+            </a>
+        </div>
+        <div class="product">
+            <a href="d20.html">
+                <img src="drawings/d20.jpg" alt="Product 20">
+                <h2>Product 20</h2>
+                <p>Price: &#x20B9;199.00</p>
+            </a>
+        </div>
+        <div class="product">
+            <a href="p8.html">
+                <img src="paintings/p8.jpg" alt="Product 16">
+                <h2>Product 2</h2>
+                <p>Price: &#x20B9;299.00</p>
+            </a>
+        </div>
+
+        <!-- Add more products as needed -->
+    </div>
+</body>
+</html>
 
