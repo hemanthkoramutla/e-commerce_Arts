@@ -104,21 +104,21 @@
         <div class="product">
             <a href="d4.html">
                 <img src="drawings/d4.jpg" alt="Product 4">
-                <h2>Product 2</h2>
+                <h2>Mystical Sovereign</h2>
                 <p>Price: &#x20B9;119.00</p>
             </a>
         </div>
         <div class="product">
             <a href="d5.html">
                 <img src="drawings/d5.jpg" alt="Product 5">
-                <h2>Product 2</h2>
+                <h2>Majestic Gaze</h2>
                 <p>Price: &#x20B9;139.00</p>
             </a>
         </div>
         <div class="product">
             <a href="p4.html">
                 <img src="paintings/p4.jpg" alt="Product 6">
-                <h2>Product 6</h2>
+                <h2>Mystical Harmony</h2>
                 <p>Price: &#x20B9;199.00</p>
             </a>
         </div>
@@ -132,14 +132,14 @@
         <div class="product">
             <a href="d7.html">
                 <img src="drawings/d7.jpg" alt="Product 7">
-                <h2>Product 2</h2>
+                <h2>Terror</h2>
                 <p>Price: &#x20B9;169.00</p>
             </a>
         </div>
         <div class="product">
             <a href="d8.html">
                 <img src="drawings/d8.jpg" alt="Product 8">
-                <h2>Product 2</h2>
+                <h2>Abstract Reverie</h2>
                 <p>Price: &#x20B9;129.00</p>
             </a>
         </div>
@@ -153,14 +153,14 @@
         <div class="product">
             <a href="d10.html">
                 <img src="drawings/d10.jpg" alt="Product 10">
-                <h2>Product 2</h2>
+                <h2>Contour Portrait</h2>
                 <p>Price: &#x20B9;139.00</p>
             </a>
         </div>
         <div class="product">
             <a href="p5.html">
                 <img src="paintings/p5.webp" alt="Product 20">
-                <h2>Product 20</h2>
+                <h2>Kaleidoscope Majesty</h2>
                 <p>Price: &#x20B9;229.00</p>
             </a>
         </div>
@@ -181,83 +181,103 @@
         <div class="product">
             <a href="d13.html">
                 <img src="drawings/d13.jpg" alt="Product 13">
-                <h2>Product 2</h2>
+                <h2>Urban Warrior</h2>
                 <p>Price: &#x20B9;229.00</p>
             </a>
         </div>
         <div class="product">
             <a href="p7.html">
                 <img src="paintings/p7.jpg" alt="Product 15">
-                <h2>Product 2</h2>
+                <h2>Vibrant Elegance</h2>
                 <p>Price: &#x20B9;179.00</p>
             </a>
         </div>
         <div class="product">
             <a href="d14.html">
                 <img src="drawings/d14.jpg" alt="Product 14">
-                <h2>Product 2</h2>
+                <h2>Cindrella</h2>
                 <p>Price: &#x20B9;249.00</p>
             </a>
         </div>
         <div class="product">
             <a href="d15.html">
                 <img src="drawings/d15.jpg" alt="Product 15">
-                <h2>Product 2</h2>
+                <h2>Elegance in Blue </h2>
                 <p>Price: &#x20B9;249.00</p>
             </a>
         </div>
         <div class="product">
             <a href="p6.html">
                 <img src="paintings/p6.webp" alt="Product 15">
-                <h2>Product 2</h2>
+                <h2>Colorful Whimsy</h2>
                 <p>Price: &#x20B9;189.00</p>
+            </a>
+        </div>
+        <div class="product">
+            <a href="d18.html">
+                <img src="drawings/d18.jpg" alt="Product 18">
+                <h2>Colosseum Unveiled </h2>
+                <p>Price: &#x20B9;229.00</p>
+            </a>
+        </div>
+        <div class="product">
+            <a href="p8.html">
+                <img src="paintings/p8.jpg" alt="Product 16">
+                <h2>Abstract Emotions</h2>
+                <p>Price: &#x20B9;299.00</p>
             </a>
         </div>
         <div class="product">
             <a href="d16.html">
                 <img src="drawings/d16.jpg" alt="Product 16">
-                <h2>Product 2</h2>
+                <h2>Enchanted Castle </h2>
                 <p>Price: &#x20B9;259.00</p>
             </a>
         </div>
         <div class="product">
             <a href="d17.html">
                 <img src="drawings/d17.jpg" alt="Product 17">
-                <h2>Product 2</h2>
+                <h2>Quiet Street</h2>
                 <p>Price: &#x20B9;299.00</p>
             </a>
         </div>
-        <div class="product">
+        <!-- <div class="product">
             <a href="d18.html">
                 <img src="drawings/d18.jpg" alt="Product 18">
                 <h2>Product 2</h2>
                 <p>Price: &#x20B9;229.00</p>
             </a>
+        </div> -->
+        <div class="product">
+            <a href="d20.html">
+                <img src="drawings/d20.jpg" alt="Product 20">
+                <h2>Joyful Canine </h2>
+                <p>Price: &#x20B9;199.00</p>
+            </a>
         </div>
         <div class="product">
             <a href="d19.html">
                 <img src="drawings/d19.jpg" alt="Product 19">
-                <h2>Product 19</h2>
+                <h2>Gothic Elegance Cathedral</h2>
                 <p>Price: &#x20B9;239.00</p>
             </a>
         </div>
-        <div class="product">
+        <!-- <div class="product">
             <a href="d20.html">
                 <img src="drawings/d20.jpg" alt="Product 20">
                 <h2>Product 20</h2>
                 <p>Price: &#x20B9;199.00</p>
             </a>
-        </div>
-        <div class="product">
+        </div> -->
+        <!-- <div class="product">
             <a href="p8.html">
                 <img src="paintings/p8.jpg" alt="Product 16">
-                <h2>Product 2</h2>
+                <h2>Abstract Emotions</h2>
                 <p>Price: &#x20B9;299.00</p>
             </a>
-        </div>
+        </div> -->
 
         <!-- Add more products as needed -->
     </div>
 </body>
 </html>
-
