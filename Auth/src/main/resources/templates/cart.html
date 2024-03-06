@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <style>
+        /* Basic CSS for styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .product {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            /* Use flexbox for layout */
+        }
+
+        .product img {
+            max-width: 100px;
+            /* Adjust the width of the image */
+            height: auto;
+            margin-right: 20px;
+            /* Add margin for spacing */
+        }
+
+        .product-details {
+            flex: 1;
+            /* Make the product details take up remaining space */
+        }
+
+        .product h2 {
+            margin-top: 0;
+        }
+
+        .product p {
+            margin: 5px 0;
+            text-align: left;
+            /* Align text to the left */
+        }
+
+        .remove-button {
+            margin-top: 10px;
+        }
+
+        .buy-now-button {
+            display: none;
+            /* Hide the button initially */
+            margin-top: 20px;
+        }
+
+        #cart-summary {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Shopping Cart</h1>
+    </header>
+    <div id="cart-summary" class="container">
+        <p>Items in Cart: <span id="cart-count"></span></p>
+        <p>Total Amount: <span id="cart-total"></span></p>
+    </div>
+    <div class="container" id="cart-items">
+        <!-- Cart items will be displayed here -->
+    </div>
+    <div class="container" id="empty-cart-message" style="display: none;">
+        <p>Your cart is empty. Please add items to your cart.</p>
+    </div>
+    <div class="container">
+        <button class="buy-now-button" onclick="goToCheckout()">
+            Proceed to Buy (<span id="cart-count-button"></span>)
+        </button>
+    </div>
+
+    <script>
+        // Retrieve cart items from localStorage
+        var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Display number of items in cart
+        document.getElementById('cart-count').textContent = cartItems.length;
+
+        // Display number of items in cart in the "Buy Now" button
+        var cartCountButton = document.getElementById('cart-count-button');
+        cartCountButton.textContent = cartItems.length === 0 ? '0 items' : cartItems.length === 1 ? '1 item' : cartItems.length + ' items';
+
+        // Calculate total amount
+        // var totalAmount = 0.0;
+        // for (var i = 0; i < cartItems.length; i++) {
+        //     // Get the price of the current item
+        //     var priceStr = cartItems[i].price.replace('₹', ''); // Remove currency symbol
+        //     var price = parseFloat(priceStr.replace(',', '')); // Remove commas and parse as float
+        //     // Check if the parsed price is a valid number
+        //     if (!isNaN(price)) {
+        //         totalAmount += price; // Add price to total amount
+        //     }
+        // }
+            //  @2nd afternoon 
+        var totalAmount = 0.0;                          
+        for (var i = 0; i < cartItems.length; i++) {
+            // Get the price of the current item
+            var priceStr = cartItems[i].price.replace('₹',''); // Remove currency symbol
+            console.log(priceStr);
+            var price = parseFloat(priceStr.replace('Price ','')); // Remove commas and parse as float
+            //var price = parseFloat(priceStr.replace(',', '')); // Remove commas and parse as float
+            // Check if the parsed price is a valid number
+            // if (isNaN(price)) {
+            //     console.log("Invalid price for item " + cartItems[i].name + ": " + cartItems[i].price);
+            // } else {
+            //     console.log("price for item " + cartItems[i].name + ": " + cartItems[i].price);
+            //     totalAmount += price; // Add price to total amount
+            //     console.log(totalAmount);
+            // }
+            console.log(price);
+            if (!isNaN(price)) {
+                totalAmount += price; // Add price to total amount
+                
+            } else {
+                console.log("Invalid price for item " + cartItems[i].name + ": " + cartItems[i].price);
+            }
+
+        }
+        // var totalAmount = 0.0;
+        // for (var i = 0; i < cartItems.length; i++) {
+        //     // Get the price of the current item
+        //     var priceStr = cartItems[i].price.replace('₹', ''); // Remove currency symbol
+        //     var price = parseFloat(priceStr); // Parse the price as float
+        //     // Check if the parsed price is a valid number
+        //     if (isNaN(price)) {
+        //         console.log("Invalid price for item " + cartItems[i].name + ": " + cartItems[i].price);
+        //     } else {
+        //         totalAmount += price; // Add price to total amount
+        //     }
+        // }
+        console.log(totalAmount);
+
+        console.log("Total amount: " + totalAmount);
+
+        document.getElementById('cart-total').textContent = '₹' + totalAmount.toFixed(2); // Display total amount
+
+        // Display cart items
+        var cartContainer = document.getElementById('cart-items');
+        var emptyCartMessage = document.getElementById('empty-cart-message');
+        var buyNowButton = document.querySelector('.buy-now-button');
+
+        if (cartItems.length === 0) {
+            emptyCartMessage.style.display = 'block';
+        } else {
+            cartItems.forEach(function (product, index) {
+                // Create product element
+                var productElement = document.createElement('div');
+                productElement.classList.add('product');
+
+                // Add product image
+                var imgElement = document.createElement('img');
+                imgElement.src = product.image;
+                productElement.appendChild(imgElement);
+
+                // Add product details
+                var detailsElement = document.createElement('div');
+                detailsElement.classList.add('product-details');
+
+                var nameElement = document.createElement('h2');
+                nameElement.textContent = product.name;
+                detailsElement.appendChild(nameElement);
+
+                var descriptionElement = document.createElement('p');
+                descriptionElement.textContent = product.description;
+                detailsElement.appendChild(descriptionElement);
+
+                var priceElement = document.createElement('p');
+                priceElement.textContent = product.price;
+                detailsElement.appendChild(priceElement);
+
+                // Add remove button
+                var removeButton = document.createElement('button');
+                removeButton.textContent = 'Remove from Cart';
+                removeButton.classList.add('remove-button');
+                removeButton.addEventListener('click', function () {
+                    removeProductFromCart(index);
+                });
+                detailsElement.appendChild(removeButton);
+
+                productElement.appendChild(detailsElement);
+
+                // Append product to cart container
+                cartContainer.appendChild(productElement);
+            });
+            buyNowButton.style.display = 'block'; // Show Buy Now button if cart is not empty
+        }
+
+        // Function to remove product from cart
+        function removeProductFromCart(index) {
+            // Retrieve cart items from localStorage
+            var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Remove the product at the specified index
+            cartItems.splice(index, 1);
+
+            // Update cart items in localStorage
+            localStorage.setItem('cart', JSON.stringify(cartItems));
+
+            // Refresh the page to reflect the changes
+            location.reload();
+        }
+
+        // Function to navigate to the checkout page
+        function goToCheckout() {
+            window.location.href = 'checkout.html';
+        }
+    </script>
+</body>
+
+</html>

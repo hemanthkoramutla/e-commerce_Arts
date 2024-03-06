@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page </title>
+    
+</head>
+<body>
+
+    <div class="signup-container">
+        <h2>Sign Up</h2>
+        <!--<form  th:action="@{/signup}" method="post">-->
+			<form th:action="@{/signup}" method="post" onsubmit="return validateForm()">
+
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            
+            <label for="password">Confirm Password:</label>
+            <input type="password" id="confirm_password" name="confirm_password"  required>
+      <span id="error_message" class="error"></span>
+
+            <button type="submit">Sign Up</button>
+            <p>Already have an account? <a href="login">Login here</a> </p>
+            <p>Are you an admin? <a href="admin_login">Login here</a> </p>
+        </form>
+    </div>
+    <script>
+        function validateForm() {
+          var password = document.getElementById("password").value;
+          var confirm_password = document.getElementById("confirm_password").value;
+    
+          if (password !== confirm_password) {
+            document.getElementById("error_message").innerHTML = "Passwords do not match";
+            return false;
+          }
+          return true;
+        }
+      </script>
+
+</body>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://image.jimcdn.com/app/cms/image/transf/none/path/s906b641b686670d9/backgroundarea/ife3090a6f76839f6/version/1563852387/image.jpg');
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .signup-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Slight transparency to show the background */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+}
+
+        /* .signup-container {
+            width: 300px;
+            margin: 100px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        } */
+        .signup-container label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        .signup-container input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+        .signup-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .signup-container button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</html>

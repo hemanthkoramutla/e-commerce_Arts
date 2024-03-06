@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"xmlns:th="http://www.thymeleaf.org">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtAura</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: left;
+        }
+
+        header {
+            background-color: #8fabe6ee;
+            color: rgba(189, 65, 226, 0.514);
+            padding: 10px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .button-container {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            display: flex;
+        }
+
+        .button-container a {
+            text-decoration: none;
+            background-color: #7fb6c0;
+            color: rgb(219, 57, 57);
+            padding: 10px 20px;
+            margin-right: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .button-container a:hover {
+            background-color: #63a1b9;
+        }
+        /* Image Slider Styles */
+        
+        .header-link{
+            background-color: green;
+            color: white;
+        }
+        .title-bar{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+
+        }
+
+
+        .title{
+            width: 80%;
+        }
+        .buttons{
+            width: 20%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .buttons a {
+            text-decoration: none;
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            margin-right: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        body{
+            background-image: url("resources/b5.jpg");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+             
+            
+            /* background-color: #7aacff; */
+        }
+        html, body {
+        height: 100%;
+    }
+        .container{
+            background-color: #45a049;
+            height: max-content;
+            width: 85vmin;
+            position: absolute;
+            transform: translate(-50%,-50%);
+            top: 50%;
+            left: 50%;
+            overflow: hidden;
+            border: 20px solid white;
+            border-radius: 8px;
+            box-shadow: 10px 25px 30px rgba(30, 30, 200, 0.3);
+
+        }
+
+        .wrapper{
+            width: 100%;
+            display: flex;
+            animation: slide 16s infinite ;
+
+        }
+
+        @keyframes slide{
+            0%{
+                transform: translateX(0);
+            }
+            25%{
+                transform: translateX(0);
+            }
+            30%{
+                transform: translateX(-100%);
+            }
+            50%{
+                transform: translateX(-200%);
+            }
+            70%{
+                transform: translateX(-300%);
+            }
+            100%{
+                transform: translateX(-300%);
+            }
+
+        }
+
+        img{
+            width: 100%;
+
+        }
+
+        .wrapper img{
+            object-fit: fill;
+        }
+    </style>
+</head>
+<body>
+   
+
+    <header>
+        <div class="title-bar">
+        
+            <div class="title">
+                <h1>ArtAura</h1>
+            </div>
+            <div class="buttons">
+                <a class="header-link" href="login">Login</a>
+                <a class="header-link" href="signup">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="image-slider"  onclick="redirectToLoginPage()">
+        <div class="wrapper">
+            <img src="resources/a1.jpg" alt="">
+            <img src="resources/d1.jpg" alt="">
+            <img src="resources/p1.jpg" alt="">
+            <img src="resources/m1.jpg" alt="">
+            <img src="resources/p1.jpg" alt="">
+            <img src="resources/m1.jpg" alt="">
+            <img src="resources/d4.png" alt="">
+            <img src="resources/d5.png" alt="">
+            <img src="resources/d6.png" alt="">
+            <img src="resources/d7.png" alt="">
+        </div>
+
+    </div>
+    <script>
+        // ... (previous code)
+      
+        function redirectToLoginPage() {
+          // Redirect to the login page
+          window.location.href = "login";
+        }
+      </script>
+
+
+
+   
+
+
+
+
+    <!-- Your page content goes here -->
+
+    <script>
+        // JavaScript for Image Slider
+        let imageIndex = 0;
+        const slider = document.querySelector('.image-slider');
+        const images = document.querySelectorAll('.slider-image');
+
+        function nextSlide() {
+            imageIndex = (imageIndex + 1) % images.length;
+            updateSlider();
+        }
+
+        function prevSlide() {
+            imageIndex = (imageIndex - 1 + images.length) % images.length;
+            updateSlider();
+        }
+
+        function updateSlider() {
+            const translateValue = -imageIndex * 100 + '%';
+            slider.style.transform = 'translateX(' + translateValue + ')';
+        }
+
+        setInterval(nextSlide, 1); // Change slide every 3 seconds
+    </script>
+  
+  
+  <!-- <script>
+    // ... (previous code)
+  
+    function redirectToLoginPage() {
+      // Redirect to the login page
+      window.location.href = 'login.html';
+    }
+  </script> -->
+  
+  </body>
+  </html>
+  
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce Website</title>
+    <style>
+        /* Basic styling for the navigation bar */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://proactivecreative.b-cdn.net/wp-content/uploads/2022/04/different-types-of-art-featured.jpg');
+            /* Replace 'your-background-image.jpg' with your image URL */
+            background-size: 1318px 650px;
+             background-size: cover;
+    		background-position: center;
+    		height: 100vh;
+            background-repeat: no-repeat;
+            /* height: 100px; */
+        }
+
+        header {
+            background-color: #9ae2e7;
+            color: #fff;
+            padding: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* Align items vertically */
+            font-size: xx-large;
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-size: large;
+            color: #fff;
+            padding: 10px;
+        }
+
+        nav ul li a:hover {
+            background-color: #679777;
+        }
+
+        .art-icon {
+            margin-right: 10px;
+            font-size: 20px;
+            /* Adjust icon size */
+        }
+
+        .site-name {
+            display: flex;
+            align-items: center;
+        }
+
+        .art-aura {
+            animation: colorChange 2s linear infinite alternate;
+            
+        }
+
+        @keyframes colorChange {
+            0% {
+                color: #ff0000;
+                /* Start color (red) */
+            }
+            10% {
+                color: #00ff00;
+            }
+            20% {
+                color: #1f3cbb;
+            }
+            50% {
+                color: #cf079d;
+            }
+            70% {
+                color: #cc849c;
+                /* Start color (red) */
+            }
+            100% {
+                color: #00ff00;
+                /* End color (green) */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="site-name">
+            <div class="art-icon">&#x1F3A8;</div>
+            <span class="art-aura">ArtAura</span> <!-- Art website name -->
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home">Home</a></li>
+                <li><a href="categories">Categories</a></li>
+                <li><a href="cart">Cart</a></li>
+                <li><a href="orders">Orders</a></li>
+                <li><a href="logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Your content goes here -->
+
+</body>
+
+</html>

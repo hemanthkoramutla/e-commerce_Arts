@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"xmlns:th="http://www.thymeleaf.org">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Types</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Apply basic styles to the body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            background-image: url('https://cdn.wallpapersafari.com/83/32/J4anH5.jpg');
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Style the heading */
+        h1 {
+            text-align: center;
+            color: #d387f1;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Style the container for each row of images */
+        .image-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            /* Add some spacing between rows */
+        }
+
+        /* Style the individual list items */
+        .image-item {
+            width: calc(33.33% - 100px);
+            /* 33.33% width with spacing between items */
+            margin-right: 10px;
+            text-align: center;
+            /* Add some spacing between items */
+        }
+
+        /* Style the links */
+        a {
+            text-decoration: none;
+            /* Remove underline */
+            color: #2d78c7;
+            /* Set link color */
+            display: block;
+            /* Make the entire list item clickable */
+            padding: 10px;
+            /* Add padding for better clickability */
+            border-radius: 10px;
+            /* Add some rounded corners */
+            background-color: #fff;
+            /* Add a background color */
+            box-shadow: 0 2px 4px rgba(25, 63, 189, 0.1);
+            /* Add a subtle shadow */
+            transition: background-color 0.3s, color 0.3s;
+            /* Add smooth transitions */
+        }
+
+        /* Style the links on hover */
+        a:hover {
+            background-color: #81a2c7;
+            /* Change background color */
+            color: #fff;
+            /* Change text color */
+        }
+
+        /* Style the images */
+        img {
+            max-width: 200px;
+            max-height: 200px;
+            margin-bottom: 5px;
+            /* Add some spacing below the images */
+        }
+
+        /* Move the header to a flex container */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Adjust the styles for the icon container */
+        .icon-container {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+            /* Add some margin to separate from the right edge */
+        }
+
+        .icon-container a {
+            color: rgb(243, 74, 74);
+            margin-right: 10px;
+            /* Reduce the margin between icons */
+            text-decoration: none;
+            font-size: 20px;
+        }
+    </style>
+    <!-- <header>
+        <h1>Sanjana</h1>
+        <div class="icon-container">
+            <a href="home.html"><i class="fas fa-home"></i></a>
+            <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+    </header> -->
+</head>
+
+<body>
+    <header>
+        <h1>Explore Arts</h1>
+        <div class="icon-container">
+            <a href="home"><i class="fas fa-home"></i></a>
+            <a href="cart"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+    </header>
+    <!-- <h1>Explore Arts</h1>
+    <div class="icon-container">
+        <a href="home.html"><i class="fas fa-home"></i></a>
+        <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+    </div> -->
+    <div class="image-row">
+        <div class="image-item">
+            <img src="drawings/d11.jpg" alt="Drawings and Paintings">
+            <a href="drawings">Drawings and Paintings</a>
+        </div>
+        <div class="image-item">
+            <img src="paintings/p6.webp" alt="Painting">
+            <a href="paintings">Paintings</a>
+        </div>
+        <div class="image-item">
+            <img src="resources/m1.jpg" alt="Sculpture">
+            <a href="Sculptures">Sculptures</a>
+        </div>
+    </div>
+    <div class="image-row">
+        <div class="image-item">
+            <img src="crafts/c5.jpg" alt="Craft">
+            <a href="craft">Crafts</a>
+        </div>
+        <div class="image-item">
+            <img src="resources/p1.jpg" alt="Microart">
+            <a href="Microarts">Microarts</a>
+        </div>
+        <div class="image-item">
+            <img src="resources/p3.jpg" alt="Glasspainting">
+            <a href="Glasspainting">Glasspainting</a>
+        </div>
+    </div>
+</body>
+
+</html>
