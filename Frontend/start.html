@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="Slider.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>ArtAura</title>
     <style>
         body {
@@ -10,13 +14,20 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            background-image: url('https://th.bing.com/th/id/OIP.oH9Foju7m8ynzAEAZbm6_QHaEo?rs=1&pid=ImgDetMain');
+            background-size: cover;
             text-align: left;
+    
         }
 
         header {
-            background-color: #8fabe6ee;
+            background-color: #89c1dbee;
             color: rgba(189, 65, 226, 0.514);
-            padding: 10px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
         }
 
         header h1 {
@@ -28,6 +39,7 @@
             top: 10px;
             left: 10px;
             display: flex;
+            /* border: none; */
         }
 
         .button-container a {
@@ -37,6 +49,7 @@
             padding: 10px 20px;
             margin-right: 10px;
             border-radius: 5px;
+            /* border: none; */
             transition: background-color 0.3s;
         }
 
@@ -51,8 +64,9 @@
         }
         .title-bar{
             display: flex;
-            flex-direction: row;
-            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 20px;
 
         }
 
@@ -64,32 +78,46 @@
             width: 20%;
             display: flex;
             justify-content: center;
+            /* border: none;
+            outline: none; */
         }
 
         .buttons a {
-            text-decoration: none;
-            background-color: #4caf50;
+            text-decoration: underline;
+            background-color: #6114c5;
             color: white;
-            padding: 10px 20px;
+            padding: 5px 10px;
             margin-right: 10px;
-            border-radius: 5px;
+            border-radius: 10px;
+            /* border: none; */
             transition: background-color 0.3s;
         }
+        .slider-section {
+      margin-top: 70px;
+        max-width: 900px;
+        width: 100%;
+        text-align: center;
+    }
 
-        body{
+    .slider-section img {
+        max-width: 100%;
+        height: auto;
+    }
+
+        /* body{
             background-image: url("resources/b5.jpg");
             background-size: contain;
             background-position: center;
-            background-repeat: no-repeat;
+            background-repeat: no-repeat; */
              
             
             /* background-color: #7aacff; */
-        }
+        /* } */
         html, body {
         height: 100%;
     }
-        .container{
-            background-color: #45a049;
+        /* .container{
+            background-color: #7bc593;
             height: max-content;
             width: 85vmin;
             position: absolute;
@@ -99,7 +127,7 @@
             overflow: hidden;
             border: 20px solid white;
             border-radius: 8px;
-            box-shadow: 10px 25px 30px rgba(30, 30, 200, 0.3);
+            box-shadow: 10px 25px 30px rgba(127, 127, 190, 0.3);
 
         }
 
@@ -139,11 +167,72 @@
 
         .wrapper img{
             object-fit: fill;
-        }
+        } */
     </style>
 </head>
 <body>
-   
+    <section id="about-us" class="d-flex justify-content-center align-items-center">
+        <div class="slider-section">
+            <div id="carousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel" data-slide-to="1"></li>
+                    <li data-target="#carousel" data-slide-to="2"></li>
+                    <li data-target="#carousel" data-slide-to="3"></li>
+                </ol> <!-- End of Indicators -->
+
+                <!-- Carousel Content -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <img src="https://wallpaperaccess.com/full/5474982.jpg"
+                            alt="Slide 1">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>Forest</h3>
+                            <p>Cool Forest.</p>
+                        </div>
+                    </div> <!-- End of Carousel Item -->
+
+                    <div class="carousel-item">
+                        <img src="https://th.bing.com/th/id/R.a5bc1380bf2b95c0184c0d021a683a0b?rik=yulmjlemRoVEzA&riu=http%3a%2f%2fstartjournal.org%2fwp-content%2fuploads%2f2015%2f04%2fEmerged-2nd-in-4-winners-of-28-Artists-that-participated-in-the-2nd-Sadolin-Mabarti-Challenge-2014.-1024x665.jpg&ehk=AMl%2fpQ3whFhOEjcLJKFWVUkCAngWv3VTHR%2btpXOcpzI%3d&risl=&pid=ImgRaw&r=0" alt="Slide 2">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>Girl</h3>
+                            <p>A happy girl.</p>
+                        </div>
+                    </div> <!-- End of Carousel Item -->
+
+                    <div class="carousel-item">
+                        <img src="https://wallpaperaccess.com/full/2318458.jpg" alt="Slide 3">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>Innocent Girl</h3>
+                            <p>Beauty of Girl innocence.</p>
+                        </div>
+                    </div> <!-- End of Carousel Item -->
+                    <div class="carousel-item">
+                        <img src="https://th.bing.com/th/id/R.0b1d180f12d5e22c6188fad97703bfb0?rik=Cx0jhPS00s6Q6A&riu=http%3a%2f%2fwallup.net%2fwp-content%2fuploads%2f2017%2f11%2f17%2f257514-painting.jpg&ehk=PFeNw%2f560oeA0aHMMhhMKItkGxc7U6ceQofhDQ3pbLY%3d&risl=&pid=ImgRaw&r=0" alt="Slide 3">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>Running Horse</h3>
+                            <p>Horse Ride.</p>
+                        </div>
+                    </div> <!-- End of Carousel Item -->
+                </div> <!-- End of Carousel Content -->
+
+                <!-- Previous & Next -->
+                <a href="#carousel" class="carousel-control-prev" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a href="#carousel" class="carousel-control-next" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div> <!-- End of Carousel -->
+        </div> <!-- End of Slider -->
+    </section>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <header>
         <div class="title-bar">
@@ -158,7 +247,7 @@
         </div>
     </header>
 
-    <div class="container">
+    <!-- <div class="container">
         <div class="image-slider"  onclick="redirectToLoginPage()">
         <div class="wrapper">
             <img src="resources/a1.jpg" alt="">
@@ -173,15 +262,15 @@
             <img src="resources/d7.png" alt="">
         </div>
 
-    </div>
-    <script>
+    </div> -->
+    <!-- <script>
         // ... (previous code)
       
         function redirectToLoginPage() {
           // Redirect to the login page
           window.location.href = 'login.html';
         }
-      </script>
+      </script> -->
 
 
 
@@ -192,7 +281,7 @@
 
     <!-- Your page content goes here -->
 
-    <script>
+    <!-- <script>
         // JavaScript for Image Slider
         let imageIndex = 0;
         const slider = document.querySelector('.image-slider');
@@ -214,7 +303,7 @@
         }
 
         setInterval(nextSlide, 1); // Change slide every 3 seconds
-    </script>
+    </script> -->
   
   
   <!-- <script>
